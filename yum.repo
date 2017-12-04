@@ -1,0 +1,28 @@
+[updates]
+name=CentOS-$releasever - Updates
+baseurl=http://olcentchan.chinacloudapp.cn/centos/$releasever/updates/$basearch/
+gpgcheck=0
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://olcentchan.chinacloudapp.cn/centos/$releasever/extras/$basearch/
+gpgcheck=0
+[base]
+name=CentOS-$releasever - Base
+baseurl=http://olcentchan.chinacloudapp.cn/centos/$releasever/os/$basearch/
+gpgcheck=0
+[remi]
+name=Remi's RPM repository for Enterprise Linux 7 - $basearch
+mirrorlist=http://rpms.remirepo.net/enterprise/7/remi/mirror
+enabled=1
+gpgcheck=0
+[remi-safe]
+name=Safe Remi's RPM repository for Enterprise Linux 7 - $basearch
+mirrorlist=http://rpms.remirepo.net/enterprise/7/safe/mirror
+enabled=1
+gpgcheck=0
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=0
