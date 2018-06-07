@@ -4,7 +4,7 @@ ENV TZ=Asia/Shanghai
 #ADD zimg.tar.gz /
 #ADD Makefile /zimg/
 RUN yum install git epel-* -y  \
-    && cd / ;git clone https://github.com/buaazp/zimg -b master --depth=1
+    && cd / ;git clone https://github.com/buaazp/zimg -b master --depth=1 \
     && yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y \
     &&  yum install -y  nasm libtool autoconf openssl  libevent \
         libevent2 libevent2-devel  libjpeg-turbo \
