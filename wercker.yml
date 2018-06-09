@@ -4,7 +4,7 @@ build:
   # The steps that will be executed on build
   steps:
   
-    - script
+    - script:
         name: install docker
         code: |
           yum install docker -y
