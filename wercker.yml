@@ -3,6 +3,7 @@ box: centos
 build:
   # The steps that will be executed on build
   steps:
+  
     - script
         name: install docker
         code: |
