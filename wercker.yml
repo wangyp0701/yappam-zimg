@@ -7,7 +7,6 @@ build:
     - script:
         name: install docker
         code: |
-          sudo -i
           apt-get update
           apt-get install docker.io -y
           dockerd
