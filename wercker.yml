@@ -1,17 +1,13 @@
-box: nodesource/trusty
+box: centos
 # Build definition
 build:
   # The steps that will be executed on build
   steps:
-    # A step that executes `npm install` command
-    - npm-install
-    # A step that executes `npm test` command
-    - npm-test
-
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
-    - script:
-        name: echo nodejs information
+    - script
+        name: install docker
         code: |
-          echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running"
+          yum install docker -y
+          dockerd
+          docker build -t wangyp0701/zimg:latest .
+          docker ruun --rm -it wangyp0701/zimg:latest
+          ps -ef|grep zimg
