@@ -1,4 +1,5 @@
 # yappam-zimg
+[![wercker status](https://app.wercker.com/status/6a490a7d994041886dd2783ffa6dbc03/s/master "wercker status")](https://app.wercker.com/project/byKey/6a490a7d994041886dd2783ffa6dbc03)
 北京雅邦网络技术发展有限公司
 
 
