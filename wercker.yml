@@ -8,8 +8,3 @@ build:
         name: install docker
         code: |
           apt-get update
-          apt-get install docker.io -y
-          dockerd
-          docker build -t wangyp0701/zimg:latest .
-          docker ruun --rm -it wangyp0701/zimg:latest
-          ps -ef|grep zimg
