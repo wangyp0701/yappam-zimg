@@ -10,7 +10,7 @@ RUN yum install git epel-* -y  \
         libevent-devel  libjpeg-turbo libpng-devel \
         ncurses-devel make automake gcc-c++  \
         cmake   giflib-devel  file \
-        libmemcached-devel \
+         libmemcached-devel \
     && cd /zimg   && make && /bin/sed -i "s/is_daemon       = 1/is_daemon       = 0/g" bin/conf/zimg.lua \
     &&  yum remove git make cmake automake memcached gcc-c++ -y && yum clean all
 EXPOSE 4869
