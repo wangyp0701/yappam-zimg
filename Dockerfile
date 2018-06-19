@@ -12,7 +12,9 @@ RUN yum install git epel-* -y  \
         cmake   giflib-devel  file \
         libmemcached-devel \
     && cd /zimg   && make && /bin/sed -i "s/is_daemon       = 1/is_daemon       = 0/g" bin/conf/zimg.lua \
-    &&  yum remove git make cmake automake memcached gcc-c++ -y && yum clean all
+    &&  yum remove git make cmake automake memcached gcc-c++ -y && yum clean all \
+	&&  mkdir /zimg/bin/log \
+    && ln -sf /dev/stdout /zimg/bin/log/zimg.log
 EXPOSE 4869
 VOLUME  /zimg/bin/img 
 WORKDIR /zimg/bin
