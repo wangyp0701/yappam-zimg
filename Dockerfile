@@ -2,12 +2,11 @@ FROM centos
 MAINTAINER wangyunpeng "wangyunpeng@yappam.com"
 ENV TZ=Asia/Shanghai
 ENV TINI_VERSION 0.18.0
-#ADD zimg.tar.gz /
-#ADD Makefile /zimg/
+
 RUN yum install git  -y  \
     && cd / ;git clone https://github.com/buaazp/zimg -b master --depth=1 \
     && yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y \
-    &&  yum install -y  nasm libtool autoconf openssl   \
+    &&  yum install -y  nasm libtool autoconf openssl \
         libevent-devel  libjpeg-turbo libpng-devel \
         ncurses-devel make automake gcc-c++  \
         cmake   giflib-devel  file \
