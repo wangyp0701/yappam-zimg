@@ -5,9 +5,9 @@ build:
   steps:
   
     - script:
-        name: install docker
+        name: copy files to wercker output 
         code: |
-          apt-get update
+          cp -R ./ ${WERCKER_OUTPUT_DIR}
 deploy: 
   steps:
     - internal/docker-push:
