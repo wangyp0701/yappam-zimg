@@ -1,10 +1,8 @@
-box: ubuntu
-# Build definition
-build:
-  # The steps that will be executed on build
+deploy: 
   steps:
-  
-    - script:
-        name: install docker
-        code: |
-          apt-get update
+    - internal/docker-push:
+        username: $Username
+        password: $Password 
+        cmd: /pipeline/source/magpie
+        tag: latest
+        repository: registry.yappam.com/zimg/zimg
