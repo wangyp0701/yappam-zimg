@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 MAINTAINER wangyunpeng "wangyunpeng@yappam.com"
 ENV TZ=Asia/Shanghai
 ENV TINI_VERSION 0.18.0
