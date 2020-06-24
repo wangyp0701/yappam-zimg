@@ -9,5 +9,14 @@
 启动方式：docker run -it -d -p 4869:4869 -v /data/zimg/:/zimg/bin/img --name zimg wangyp0701/zimg
 ```
 
+*  [helm](https://helm.sh) 安装到k8s
+
+```bash
+ helm repo add ali https://apphub.aliyuncs.com/experimental
+ helm repo update
+ helm install zimg ali/zimg
+ ```
+
+
 
 
