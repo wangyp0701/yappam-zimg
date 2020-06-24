@@ -4,8 +4,8 @@ ENV TZ Asia/Shanghai
 ENV TINI_VERSION 0.19.0
 ENV ZIMG_VERSION 3.2.0
 
-RUN     yum update -y   \ &&
-        yum install -y  nasm libtool autoconf openssl \
+RUN     yum update -y   \ 
+     && yum install -y  nasm libtool autoconf openssl \
         libevent-devel  libjpeg-turbo libpng-devel \
         ncurses-devel make automake gcc-c++  \
         cmake   giflib-devel  file \
